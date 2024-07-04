@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:screwpro/inicio_sesion.dart';
+import 'inicio_sesion.dart';
+import 'registro.dart'; // Importar la pantalla de registro
 
 void main() {
   runApp(const MyApp());
@@ -7,6 +8,7 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -14,8 +16,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: InicioSesion(),
+      home: InicioSesion(), // Inicio con la pantalla de inicio de sesión
     );
   }
 }
+
 

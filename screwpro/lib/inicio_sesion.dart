@@ -1,35 +1,146 @@
 import 'package:flutter/material.dart';
+import 'registro.dart'; // Importar la pantalla de registro
 
 class InicioSesion extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Sesion'),
+        title: const Text('Inicio Sesión'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            TextField(
-              decoration: InputDecoration(labelText: 'USUARIO'),
+            // Imagen local arriba de los labels
+            ClipOval(
+              child: Image.asset(
+                'assets/img/Logo2.jpg', // Imagen local
+                height: 300,
+                width: 300,
+                fit: BoxFit.cover,
+              ),
             ),
-            TextField(
-              decoration: InputDecoration(labelText: 'CONTRASEÑA'),
-              obscureText: true,
+            SizedBox(height: 40),
+            Row(
+              children: [
+                Text(
+                  'USUARIO:',
+                  style: TextStyle(
+                    color: Colors.blue[900], // Azul marino
+                    fontSize: 16.0,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ],
+            ),
+            Row(
+              children: [
+                Expanded(
+                  child: TextField(
+                    decoration: InputDecoration(
+                      labelText: '', // Texto del label vacío
+                      labelStyle: TextStyle(color: Colors.white), // Letra blanca
+                      hintText: 'USUARIO',
+                      hintStyle: TextStyle(color: Colors.blue[900]), // Letra azul oscuro
+                      filled: true,
+                      fillColor: Colors.white, // Fondo blanco
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(30.0), // Bordes redondeados
+                      ),
+                    ),
+                  ),
+                ),
+              ],
             ),
             SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () {
-                // Aquí puedes agregar la lógica de inicio de sesión
-              },
-              child:const Text('Sesion'),
+            Row(
+              children: [
+                Text(
+                  'CONTRASEÑA:',
+                  style: TextStyle(
+                    color: Colors.blue[900], // Azul marino
+                    fontSize: 16.0,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ],
+            ),
+            Row(
+              children: [
+                Expanded(
+                  child: TextField(
+                    decoration: InputDecoration(
+                      labelText: '', // Texto del label vacío
+                      labelStyle: TextStyle(color: Colors.white), // Letra blanca
+                      hintText: 'CONTRASEÑA',
+                      hintStyle: TextStyle(color: Colors.blue[900]), // Letra azul oscuro
+                      filled: true,
+                      fillColor: Colors.white, // Fondo blanco
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(30.0), // Bordes redondeados
+                      ),
+                    ),
+                    obscureText: true,
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(height: 20),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ElevatedButton(
+                  onPressed: () {
+                    // Aquí puedes agregar la lógica de inicio de sesión
+                  },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.lightBlue, // Color del botón azul cielo
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(30.0), // Bordes redondeados
+                    ),
+                  ),
+                  child: const Text('Entrar'),
+                ),
+              ],
+            ),
+            SizedBox(height: 20),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                TextButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Registro()), // Navegar a la pantalla de registro
+                    );
+                  },
+                  child: const Text(
+                    'Registrarse',
+                    style: TextStyle(color: Colors.blue), // Botón transparente
+                  ),
+                ),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                TextButton(
+                  onPressed: () {
+                    // Aquí puedes agregar la lógica para recuperar la contraseña
+                  },
+                  child: const Text(
+                    'Olvidé mi contraseña',
+                    style: TextStyle(color: Colors.blue), // Botón transparente
+                  ),
+                ),
+              ],
             ),
           ],
         ),
       ),
+      backgroundColor: Colors.grey, // Color de fondo gris
     );
   }
 }
-
