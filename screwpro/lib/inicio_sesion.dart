@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'registro.dart'; // Importar la pantalla de registro
+import 'home.dart'; // Importar la pantalla home
 
 class InicioSesion extends StatelessWidget {
   @override
@@ -94,6 +95,10 @@ class InicioSesion extends StatelessWidget {
                 ElevatedButton(
                   onPressed: () {
                     // Aquí puedes agregar la lógica de inicio de sesión
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(builder: (context) => HomeScreen()), // Navegar a la pantalla home
+                    );
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.lightBlue, // Color del botón azul cielo
