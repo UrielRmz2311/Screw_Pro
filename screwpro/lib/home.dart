@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'inicio_sesion.dart'; // Importa la pantalla de inicio de sesión
+import 'tornillos.dart'; // Importa la pantalla de tornillos
+import 'tornillos_estandar.dart'; // Importa la pantalla de tornillos estándar
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -40,18 +42,24 @@ class HomeScreen extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                ElevatedButton(
-                  onPressed: () {
-                    // Acción para el botón "Milimétricos"
-                  },
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.lightBlue, // Color del botón azul cielo
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(30.0), // Bordes redondeados
+                SizedBox(
+                  width: 200,
+                  child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => TornillosScreen()),
+                      );
+                    },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.lightBlue, // Color del botón azul cielo
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(30.0), // Bordes redondeados
+                      ),
+                      padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 20),
                     ),
-                    padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 20),
+                    child: const Text('Milimétricos'),
                   ),
-                  child: const Text('Milimétricos'),
                 ),
               ],
             ),
@@ -59,18 +67,24 @@ class HomeScreen extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                ElevatedButton(
-                  onPressed: () {
-                    // Acción para el botón "Estándar"
-                  },
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.lightBlue, // Color del botón azul cielo
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(30.0), // Bordes redondeados
+                SizedBox(
+                  width: 200,
+                  child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => TornillosEstandarScreen()),
+                      );
+                    },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color.fromARGB(255, 244, 7, 3), // Color del botón rojo
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(30.0), // Bordes redondeados
+                      ),
+                      padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 20),
                     ),
-                    padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 20),
+                    child: const Text('Estándar'),
                   ),
-                  child: const Text('Estándar'),
                 ),
               ],
             ),
