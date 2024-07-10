@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'inicio_sesion.dart';
+import 'info_allen_mili.dart'; // Asegúrate de importar la vista correspondiente
 
 class LargoAllenlMiliScreen extends StatelessWidget {
   @override
@@ -70,7 +71,12 @@ class LargoAllenlMiliScreen extends StatelessWidget {
                         padding: const EdgeInsets.only(bottom: 10.0), // Separación vertical entre botones
                         child: ElevatedButton(
                           onPressed: () {
-                            // Acción para el botón
+                            if (buttonText == '18 mm') { // Ajuste aquí sin las comillas adicionales
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => InfoAllenMiliScreen()),
+                              );
+                            }
                           },
                           style: ElevatedButton.styleFrom(
                             backgroundColor: const Color.fromARGB(255, 208, 73, 73), // Color del botón
@@ -95,7 +101,7 @@ class LargoAllenlMiliScreen extends StatelessWidget {
                         padding: const EdgeInsets.only(bottom: 10.0), // Separación vertical entre botones
                         child: ElevatedButton(
                           onPressed: () {
-                            // Acción para el botón
+                            // Acción para otros botones
                           },
                           style: ElevatedButton.styleFrom(
                             backgroundColor: const Color.fromARGB(255, 208, 73, 73), // Color del botón
@@ -125,23 +131,23 @@ class LargoAllenlMiliScreen extends StatelessWidget {
   String _getButtonLabelForIndex1(int index) {
     switch (index) {
       case 0:
-        return '4 mm"';
+        return '4 mm'; 
       case 1:
-        return '5 mm"';
+        return '5 mm'; 
       case 2:
-        return '6 mm"';
+        return '6 mm'; 
       case 3:
-        return '8 mm"';
+        return '8 mm'; 
       case 4:
-        return '10 mm"';
+        return '10 mm'; 
       case 5:
-        return '12 mm"';
+        return '12 mm'; 
       case 6:
-        return '14 mm"';
+        return '14 mm'; 
       case 7:
-        return '16 mm"';
+        return '16 mm'; 
       case 8:
-        return '18 mm"';
+        return '18 mm'; 
       default:
         return '';
     }
@@ -150,21 +156,21 @@ class LargoAllenlMiliScreen extends StatelessWidget {
   String _getButtonLabelForIndex2(int index) {
     switch (index) {
       case 9:
-        return '20 mm"';
+        return '20 mm'; 
       case 10:
-        return '25 mm"';
+        return '25 mm'; 
       case 11:
-        return '30 mm"';
+        return '30 mm'; 
       case 12:
-        return '35 mm"';
+        return '35 mm'; 
       case 13:
-        return '40 mm"';
+        return '40 mm'; 
       case 14:
-        return '45 mm"';
+        return '45 mm'; 
       case 15:
-        return '50 mm"';
+        return '50 mm'; 
       case 16:
-        return '55 mm"';
+        return '55 mm'; 
       default:
         return '';
     }
