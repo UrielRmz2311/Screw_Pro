@@ -57,11 +57,23 @@ class TorxMiliScreen extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 10), // Espacio entre el botón y la imagen
-                  Image.asset(
-                    'assets/img/1.jpg', // Ruta de la imagen local
-                    height: 125,
-                    width: 125,
-                    fit: BoxFit.cover,
+                  Align(
+                    alignment: Alignment.center,
+                    child: Column(
+                      children: [
+                        Image.asset(
+                          'assets/img/2.jpg', // Ruta de la imagen local
+                          height: 125,
+                          width: 125,
+                          fit: BoxFit.cover,
+                        ),
+                        const SizedBox(height: 10), // Espacio entre la imagen y el texto
+                        Text(
+                          'GRUESO',
+                          style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),

@@ -56,11 +56,20 @@ class GotaEstaScreen extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 10), // Espacio entre el botón y la imagen
-                  Image.asset(
-                    'assets/img/4.jpg', // Ruta de la imagen local
-                    height: 125,
-                    width: 125,
-                    fit: BoxFit.cover,
+                  Column(
+                    children: [
+                      Image.asset(
+                        'assets/img/4.jpg', // Ruta de la imagen local
+                        height: 125,
+                        width: 125,
+                        fit: BoxFit.cover,
+                      ),
+                      const SizedBox(height: 10), // Espacio entre la imagen y el texto
+                      Text(
+                        'GRUESO',
+                        style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                      ),
+                    ],
                   ),
                 ],
               ),
@@ -169,4 +178,3 @@ class GotaEstaScreen extends StatelessWidget {
     }
   }
 }
-
