@@ -22,17 +22,19 @@ class InfoTorxMiliScreen extends StatelessWidget {
           ),
         ],
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          children: <Widget>[
-            Align(
-              alignment: Alignment.topCenter,
-              child: Column(
+      body: Center(
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: <Widget>[
+              // Logo centrado
+              Column(
                 children: [
                   ClipOval(
                     child: Image.asset(
-                      'assets/img/Logo2.jpg', // Imagen local
+                      'assets/img/Logo2.jpg',
                       height: 125,
                       width: 125,
                       fit: BoxFit.cover,
@@ -41,132 +43,88 @@ class InfoTorxMiliScreen extends StatelessWidget {
                   const SizedBox(height: 10), // Espacio entre el logo y el botón
                   ElevatedButton(
                     onPressed: () {
-                      // Acción para el botón "LARGO"
+                      // No hay acción asignada
                     },
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Color.fromARGB(255, 255, 42, 212), // Color del botón rojo
+                      backgroundColor: Color.fromARGB(255, 248, 255, 42),
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(30.0), // Bordes redondeados
+                        borderRadius: BorderRadius.circular(30.0),
                       ),
                       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                     ),
                     child: const Text(
-                      'LARGO',
-                      style: TextStyle(fontSize: 16, color: Colors.black), // Color del texto del botón
+                      'MILIMETRICOS',
+                      style: TextStyle(fontSize: 16, color: Colors.black),
                     ),
                   ),
-                ],
-              ),
-            ),
-            const SizedBox(height: 20), // Espacio entre el logo y los botones
-            Expanded(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Column(
-                    children: List.generate(9, (index) {
-                      String buttonText = _getButtonLabelForIndex1(index);
-                      return Padding(
-                        padding: const EdgeInsets.only(bottom: 10.0), // Separación vertical entre botones
-                        child: ElevatedButton(
-                          onPressed: () {
-                            // Acción para el botón
-                          },
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: const Color.fromARGB(255, 208, 73, 73), // Color del botón
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(30.0), // Bordes redondeados
-                            ),
-                            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-                          ),
-                          child: Text(
-                            buttonText,
-                            style: const TextStyle(color: Colors.black), // Color del texto del botón
-                          ),
-                        ),
-                      );
-                    }),
-                  ),
-                  const SizedBox(width: 20), // Espacio entre las dos columnas de botones
-                  Column(
-                    children: List.generate(8, (index) {
-                      String buttonText = _getButtonLabelForIndex2(index + 9);
-                      return Padding(
-                        padding: const EdgeInsets.only(bottom: 10.0), // Separación vertical entre botones
-                        child: ElevatedButton(
-                          onPressed: () {
-                            // Acción para el botón
-                          },
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: const Color.fromARGB(255, 208, 73, 73), // Color del botón
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(30.0), // Bordes redondeados
-                            ),
-                            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-                          ),
-                          child: Text(
-                            buttonText,
-                            style: const TextStyle(color: Colors.black), // Color del texto del botón
-                          ),
-                        ),
-                      );
-                    }),
+                  const SizedBox(height: 10), // Espacio entre el botón y el texto adicional
+                  const Text(
+                    '8 mm X 18 mm',
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                   ),
                 ],
               ),
-            ),
-          ],
+              const SizedBox(height: 30), // Espacio entre el logo y las secciones de información
+              // Información con imágenes y textos
+              _buildInfoSection(
+                'assets/img/diametro.jpg',
+                'Diámetro: M8 (8 mm de diámetro nominal)',
+                'Diámetro',
+              ),
+              const SizedBox(height: 20), // Espacio entre las secciones
+              _buildInfoSection(
+                'assets/img/largo.jpg',
+                'Longitud: 18 mm',
+                'Largo',
+              ),
+              const SizedBox(height: 20), // Espacio entre las secciones
+              _buildInfoSection(
+                'assets/img/paso.jpg',
+                'Paso de rosca: Depende del estándar de rosca utilizado (por ejemplo, métrico fino o grueso)',
+                'Paso de rosca',
+              ),
+              const SizedBox(height: 20), // Espacio entre las secciones
+              _buildInfoSection(
+                'assets/img/cabeza.jpg',
+                'Cabeza del tornillo: Cabeza hexagonal interior, diseñada para ser utilizada con una llave Allen o llave hexagonal correspondiente',
+                'Cabeza del tornillo',
+              ),
+            ],
+          ),
         ),
       ),
-      backgroundColor: Colors.grey, // Color de fondo gris
+      backgroundColor: Colors.grey,
     );
   }
 
-  String _getButtonLabelForIndex1(int index) {
-    switch (index) {
-      case 0:
-        return '1/2"';
-      case 1:
-        return '3/4"';
-      case 2:
-        return '1"';
-      case 3:
-        return '1 1/4"';
-      case 4:
-        return '1 1/2"';
-      case 5:
-        return '1 3/4"';
-      case 6:
-        return '2"';
-      case 7:
-        return '2 1/2"';
-      case 8:
-        return '3"';
-      default:
-        return '';
-    }
-  }
-
-  String _getButtonLabelForIndex2(int index) {
-    switch (index) {
-      case 9:
-        return '3 1/2"';
-      case 10:
-        return '4"';
-      case 11:
-        return '4 1/2"';
-      case 12:
-        return '5"';
-      case 13:
-        return '5 1/2"';
-      case 14:
-        return '6"';
-      case 15:
-        return '6 1/2"';
-      case 16:
-        return '7"';
-      default:
-        return '';
-    }
+  // Función para construir cada sección de información con imagen y texto centrados
+  Widget _buildInfoSection(String imagePath, String description, String title) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        // Texto del título
+        Text(
+          title,
+          style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+          textAlign: TextAlign.center,
+        ),
+        const SizedBox(height: 8), // Espacio entre el título y la imagen
+        // Imagen
+        Image.asset(
+          imagePath,
+          height: 50,
+          width: 100,
+          fit: BoxFit.cover,
+        ),
+        const SizedBox(height: 8), // Espacio entre la imagen y el texto de descripción
+        // Texto de descripción
+        Text(
+          description,
+          style: TextStyle(fontSize: 16),
+          textAlign: TextAlign.center,
+        ),
+      ],
+    );
   }
 }

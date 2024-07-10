@@ -74,7 +74,7 @@ class LargoTorxEstaScreen extends StatelessWidget {
                             if (buttonText == '2"') {
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (context) => InfoTorxnEstaScreen()),
+                                MaterialPageRoute(builder: (context) => InfoTorxEstaScreen()),
                               );
                             }
                           },

@@ -63,7 +63,7 @@ class HomeScreen extends StatelessWidget {
                 ),
               ],
             ),
-            const SizedBox(height: 40), // Espacio entre los dos botones
+            const SizedBox(height: 40), // Espacio entre los botones
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -87,6 +87,13 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
               ],
+            ),
+            const SizedBox(height: 40), // Espacio entre los botones y la imagen
+            Image.asset(
+              'assets/img/7.jpg', // Ruta de la imagen local
+              height: 200,
+              width: 300,
+              fit: BoxFit.cover,
             ),
           ],
         ),
