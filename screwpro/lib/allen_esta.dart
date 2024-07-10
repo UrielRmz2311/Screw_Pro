@@ -80,7 +80,7 @@ class AllenEstaScreen extends StatelessWidget {
                           // Acción para el botón número ${number}
                         },
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.lightBlue, // Color del botón azul cielo
+                          backgroundColor: Color.fromARGB(255, 208, 73, 73),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(30.0), // Bordes redondeados
                           ),
@@ -106,7 +106,7 @@ class AllenEstaScreen extends StatelessWidget {
                           // Acción para el botón número ${number}
                         },
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.lightBlue, // Color del botón azul cielo
+                          backgroundColor: Color.fromARGB(255, 208, 73, 73),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(30.0), // Bordes redondeados
                           ),

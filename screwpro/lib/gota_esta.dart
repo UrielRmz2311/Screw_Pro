@@ -78,7 +78,7 @@ class GotaEstaScreen extends StatelessWidget {
                           // Acción para el botón número ${index + 1}
                         },
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.lightBlue, // Color del botón azul cielo
+                          backgroundColor: Color.fromARGB(255, 208, 73, 73),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(30.0), // Bordes redondeados
                           ),
@@ -99,7 +99,7 @@ class GotaEstaScreen extends StatelessWidget {
                           // Acción para el botón número ${index + 10}
                         },
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.lightBlue, // Color del botón azul cielo
+                          backgroundColor: Color.fromARGB(255, 208, 73, 73),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(30.0), // Bordes redondeados
                           ),
