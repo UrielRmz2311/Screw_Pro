@@ -69,8 +69,8 @@ class TornillosScreen extends StatelessWidget {
                     children: <Widget>[
                       Image.asset(
                         'assets/img/${index + 1}.jpg', // Imagen local
-                        height: 350,
-                        width: 350,
+                        height: 100,
+                        width: 100,
                         fit: BoxFit.cover,
                       ),
                       const SizedBox(height: 10),
@@ -86,7 +86,7 @@ class TornillosScreen extends StatelessWidget {
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(30.0), // Bordes redondeados
                           ),
-                          padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 20),
+                          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                         ),
                         child: Text(buttonNames[index]),
                       ),
