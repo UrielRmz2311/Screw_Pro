@@ -13,7 +13,7 @@ class Registro extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Image.asset(
-              'assets/img/Logo.jpg', // Imagen local
+              'assets/img/Logo2.jpg', // Imagen local
               height: 200,
               fit: BoxFit.cover,
             ),
