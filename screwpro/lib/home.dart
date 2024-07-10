@@ -91,7 +91,7 @@ class HomeScreen extends StatelessWidget {
             const SizedBox(height: 40), // Espacio entre los botones y la imagen
             Image.asset(
               'assets/img/7.jpg', // Ruta de la imagen local
-              height: 200,
+              height: 170,
               width: 300,
               fit: BoxFit.cover,
             ),
