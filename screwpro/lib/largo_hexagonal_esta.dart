@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'inicio_sesion.dart';
 
-class LargoTorxEstaScreen extends StatelessWidget {
+class LargoHexagonalEstaScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Largo Torx Estandar'),
+        title: const Text('Largo Hexagonal Estandar'),
         actions: <Widget>[
           TextButton(
             onPressed: () {

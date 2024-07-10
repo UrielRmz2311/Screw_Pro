@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'inicio_sesion.dart'; // Importa la pantalla de inicio de sesión
+import 'largo_torx_esta.dart'; // Asegúrate de importar la vista correspondiente
 
 class TorxEstaScreen extends StatelessWidget {
   @override
@@ -75,7 +76,12 @@ class TorxEstaScreen extends StatelessWidget {
                       padding: const EdgeInsets.only(bottom: 10.0), // Separación vertical entre botones
                       child: ElevatedButton(
                         onPressed: () {
-                          // Acción para el botón número ${index + 1}
+                          if (_getButtonLabelForIndex1(index) == '5/16"') {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => LargoTorxEstaScreen()),
+                            );
+                          }
                         },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Color.fromARGB(255, 208, 73, 73),

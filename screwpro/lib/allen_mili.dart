@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'inicio_sesion.dart'; // Importa la pantalla de inicio de sesión
+import 'largo_allen_mili.dart'; // Importa la vista correspondiente
 
 class AllenMiliScreen extends StatelessWidget {
   @override
@@ -77,7 +78,12 @@ class AllenMiliScreen extends StatelessWidget {
                       padding: const EdgeInsets.only(bottom: 10.0), // Separación vertical entre botones
                       child: ElevatedButton(
                         onPressed: () {
-                          // Acción para el botón número ${number}
+                          if (buttonText == 'M 6') {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => LargoAllenlMiliScreen()),
+                            );
+                          }
                         },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.lightBlue, // Color del botón azul cielo
@@ -100,7 +106,7 @@ class AllenMiliScreen extends StatelessWidget {
                       padding: const EdgeInsets.only(bottom: 10.0), // Separación vertical entre botones
                       child: ElevatedButton(
                         onPressed: () {
-                          // Acción para el botón número ${number}
+                          // Acción para otros botones
                         },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.lightBlue, // Color del botón azul cielo

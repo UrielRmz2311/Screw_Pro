@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'inicio_sesion.dart'; // Importa la pantalla de inicio de sesión
+import 'largo_allen_esta.dart'; // Asegúrate de importar la vista correspondiente
 
 class AllenEstaScreen extends StatelessWidget {
   @override
@@ -77,7 +78,12 @@ class AllenEstaScreen extends StatelessWidget {
                       padding: const EdgeInsets.only(bottom: 10.0), // Separación vertical entre botones
                       child: ElevatedButton(
                         onPressed: () {
-                          // Acción para el botón número ${number}
+                          if (buttonText == '1/4"') {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => LargoAllenEstaScreen()),
+                            );
+                          }
                         },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Color.fromARGB(255, 208, 73, 73),

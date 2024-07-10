@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'inicio_sesion.dart'; // Importa la pantalla de inicio de sesión
+import 'largo_hexagonal_mili.dart'; // Importa la vista correspondiente
 
 class HexagonalMiliScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('HEXAGONALES Milimétricos'),
+        title: const Text('Largo Torx Milimétricos'),
         actions: <Widget>[
           TextButton(
             onPressed: () {
@@ -57,7 +58,7 @@ class HexagonalMiliScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: 10), // Espacio entre el botón y la imagen
                   Image.asset(
-                    'assets/img/3.jpg', // Ruta de la imagen local
+                    'assets/img/1.jpg', // Ruta de la imagen local
                     height: 125,
                     width: 125,
                     fit: BoxFit.cover,
@@ -72,12 +73,17 @@ class HexagonalMiliScreen extends StatelessWidget {
                 Column(
                   children: List.generate(9, (index) {
                     int number = index + 1;
-                    String buttonText = _getButtonLabelForIndex1(number);
+                    String buttonText = _getButtonLabelForIndex(number);
                     return Padding(
                       padding: const EdgeInsets.only(bottom: 10.0), // Separación vertical entre botones
                       child: ElevatedButton(
                         onPressed: () {
-                          // Acción para el botón número ${number}
+                          if (buttonText == 'M 10') {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => LargoHexagonalMiliScreen()),
+                            );
+                          }
                         },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.lightBlue, // Color del botón azul cielo
@@ -95,12 +101,12 @@ class HexagonalMiliScreen extends StatelessWidget {
                 Column(
                   children: List.generate(9, (index) {
                     int number = index + 10;
-                    String buttonText = _getButtonLabelForIndex2(number);
+                    String buttonText = _getButtonLabelForIndex(number);
                     return Padding(
                       padding: const EdgeInsets.only(bottom: 10.0), // Separación vertical entre botones
                       child: ElevatedButton(
                         onPressed: () {
-                          // Acción para el botón número ${number}
+                          // Acción para otros botones
                         },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.lightBlue, // Color del botón azul cielo
@@ -123,7 +129,7 @@ class HexagonalMiliScreen extends StatelessWidget {
     );
   }
 
-  String _getButtonLabelForIndex1(int index) {
+  String _getButtonLabelForIndex(int index) {
     switch (index) {
       case 1:
         return 'M 1.6';
@@ -143,13 +149,6 @@ class HexagonalMiliScreen extends StatelessWidget {
         return 'M 8';
       case 9:
         return 'M 10';
-      default:
-        return '';
-    }
-  }
-
-  String _getButtonLabelForIndex2(int index) {
-    switch (index) {
       case 10:
         return 'M 12';
       case 11:
