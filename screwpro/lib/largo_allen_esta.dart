@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'inicio_sesion.dart';
+import 'info_allen_esta.dart'; // Importa la vista correspondiente
 
 class LargoAllenEstaScreen extends StatelessWidget {
   @override
@@ -44,7 +45,7 @@ class LargoAllenEstaScreen extends StatelessWidget {
                       // Acción para el botón "LARGO"
                     },
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Color.fromARGB(255, 8, 169, 8), // Color del botón rojo
+                      backgroundColor: const Color.fromARGB(255, 8, 169, 8), // Color del botón verde
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(30.0), // Bordes redondeados
                       ),
@@ -70,7 +71,12 @@ class LargoAllenEstaScreen extends StatelessWidget {
                         padding: const EdgeInsets.only(bottom: 10.0), // Separación vertical entre botones
                         child: ElevatedButton(
                           onPressed: () {
-                            // Acción para el botón
+                            if (buttonText == '2"') {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => InfoAllenEstaScreen()),
+                              );
+                            }
                           },
                           style: ElevatedButton.styleFrom(
                             backgroundColor: const Color.fromARGB(255, 208, 73, 73), // Color del botón
@@ -95,7 +101,7 @@ class LargoAllenEstaScreen extends StatelessWidget {
                         padding: const EdgeInsets.only(bottom: 10.0), // Separación vertical entre botones
                         child: ElevatedButton(
                           onPressed: () {
-                            // Acción para el botón
+                            // Acción para otros botones
                           },
                           style: ElevatedButton.styleFrom(
                             backgroundColor: const Color.fromARGB(255, 208, 73, 73), // Color del botón
