@@ -23,7 +23,7 @@ class AllenMiliScreen extends StatelessWidget {
           ),
         ],
       ),
-      body: Padding(
+      body: SingleChildScrollView(
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: <Widget>[
@@ -63,8 +63,8 @@ class AllenMiliScreen extends StatelessWidget {
                       children: [
                         Image.asset(
                           'assets/img/1.jpg', // Ruta de la imagen local
-                          height: 125,
-                          width: 125,
+                          height: 100,
+                          width: 100,
                           fit: BoxFit.cover,
                         ),
                         const SizedBox(height: 10), // Espacio entre la imagen y el texto

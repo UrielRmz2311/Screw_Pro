@@ -34,8 +34,8 @@ class LargoAllenEstaScreen extends StatelessWidget {
                   ClipOval(
                     child: Image.asset(
                       'assets/img/Logo2.jpg', // Imagen local
-                      height: 125,
-                      width: 125,
+                      height: 100,
+                      width: 100,
                       fit: BoxFit.cover,
                     ),
                   ),

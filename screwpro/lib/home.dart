@@ -19,22 +19,29 @@ class HomeScreen extends StatelessWidget {
             },
             child: const Text(
               'Cerrar Sesión',
-              style: TextStyle(color: Colors.white),
+              style: TextStyle(color: Colors.black),
             ),
           ),
         ],
       ),
-      body: Padding(
+      body: SingleChildScrollView(
         padding: const EdgeInsets.all(16.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            // Imagen local arriba de los botones
+            const Text(
+              'Bienvenido',
+              style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            const SizedBox(height: 20), // Espacio entre el texto y la imagen
             ClipOval(
               child: Image.asset(
                 'assets/img/Logo2.jpg', // Imagen local
-                height: 300,
-                width: 300,
+                height: 200,
+                width: 200,
                 fit: BoxFit.cover,
               ),
             ),
@@ -58,7 +65,10 @@ class HomeScreen extends StatelessWidget {
                       ),
                       padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 20),
                     ),
-                    child: const Text('Milimétricos'),
+                    child: const Text(
+                      'Milimétricos',
+                      style: TextStyle(color: Colors.black),
+                    ),
                   ),
                 ),
               ],
@@ -83,7 +93,10 @@ class HomeScreen extends StatelessWidget {
                       ),
                       padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 20),
                     ),
-                    child: const Text('Estándar'),
+                    child: const Text(
+                      'Estándar',
+                      style: TextStyle(color: Colors.black),
+                    ),
                   ),
                 ),
               ],
@@ -91,7 +104,7 @@ class HomeScreen extends StatelessWidget {
             const SizedBox(height: 40), // Espacio entre los botones y la imagen
             Image.asset(
               'assets/img/7.jpg', // Ruta de la imagen local
-              height: 200,
+              height: 170,
               width: 300,
               fit: BoxFit.cover,
             ),

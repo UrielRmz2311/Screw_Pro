@@ -94,7 +94,6 @@ class InicioSesion extends StatelessWidget {
               children: [
                 ElevatedButton(
                   onPressed: () {
-                    // Aquí puedes agregar la lógica de inicio de sesión
                     Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(builder: (context) => HomeScreen()), // Navegar a la pantalla home
@@ -123,7 +122,7 @@ class InicioSesion extends StatelessWidget {
                   },
                   child: const Text(
                     'Registrarse',
-                    style: TextStyle(color: Colors.blue), // Botón transparente
+                    style: TextStyle(color: Colors.blueAccent), // Botón transparente
                   ),
                 ),
               ],
@@ -133,11 +132,10 @@ class InicioSesion extends StatelessWidget {
               children: [
                 TextButton(
                   onPressed: () {
-                    // Aquí puedes agregar la lógica para recuperar la contraseña
                   },
                   child: const Text(
                     'Olvidé mi contraseña',
-                    style: TextStyle(color: Colors.blue), // Botón transparente
+                    style: TextStyle(color: Colors.blueAccent), // Botón transparente
                   ),
                 ),
               ],
