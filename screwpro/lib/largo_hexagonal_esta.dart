@@ -23,7 +23,7 @@ class LargoHexagonalEstaScreen extends StatelessWidget {
           ),
         ],
       ),
-      body: SingleChildScrollView(
+      body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: <Widget>[
